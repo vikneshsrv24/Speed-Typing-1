@@ -38,3 +38,18 @@ if __name__=='__main__':
     
     terminal="This is a paragraph. You're reading a paragraph right now. This paragraph is four sentences long, but not all paragraphs are that long. Your paragraphs can be as long or as short as you want."
     print("Enter the paragraph below : ",terminal)
+
+    input()                               #press enter for speed check
+    
+    starttime=time()                            #logic to record input time
+    interminal=input()
+    endtime=time()
+
+    time=round(totaltime(starttime,endtime),2)            # return function values and time round off
+    speed=speed(interminal,starttime,endtime)
+    errors=TypeError(terminal)
+
+    
+
+
+    
