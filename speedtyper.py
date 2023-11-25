@@ -24,9 +24,7 @@ def typerror(terminal):
 def speed(inputterminal,starttime,endtime):    #logic to calculate speed WPM
     global time
     global inputwords
-    #global startime
-    
-    
+
     inputwords=inputterminal.split()
     twords=len(inputwords)
     speed=twords/time
@@ -42,9 +40,9 @@ if __name__=='__main__':
     terminal="This is a paragraph. You're reading a paragraph right now. This paragraph is three sentences long."
     print("Enter the paragraph below : ",terminal)
     print("*---------------------------*")
-    input()                               #press enter for speed check
+    input()                                                              #press enter
     
-    starttime=time()                            #logic to record input time
+    starttime=time()                                                     #logic to record input time
     inputterminal=input()
     endtime=time()
 
@@ -52,7 +50,7 @@ if __name__=='__main__':
     speed=speed(inputterminal,starttime,endtime)
     errors=typerror(terminal)
     print("*----------------------------*")
-    print("Total time taken: ",time,"s")
+    print("Total time taken: ",time,"sec")
     print("Average typing speed: ",speed)
     print("Total errors: ",errors)
 
