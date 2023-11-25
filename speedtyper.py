@@ -2,7 +2,7 @@ from time import time
 
 def typeerror(terminal):
     global inputwords
-    words=terminal.spilt()  # words into list
+    words=terminal.split()  # words into list
     errors=0
 
     for i in range(len(inputwords)):            #logic to calculate input accuracy
@@ -36,9 +36,9 @@ def timetaken(starttime,endtime):     #logic for calculating total time taken to
 
 if __name__=='__main__':
     
-    terminal="This is a paragraph. You're reading a paragraph right now. This paragraph is four sentences long, but not all paragraphs are that long. Your paragraphs can be as long or as short as you want."
+    terminal="This is a paragraph. You're reading a paragraph right now. This paragraph is three sentences long."
     print("Enter the paragraph below : ",terminal)
-
+    print("*---------------------------*")
     input()                               #press enter for speed check
     
     starttime=time()                            #logic to record input time
@@ -49,7 +49,7 @@ if __name__=='__main__':
     speed=speed(inputterminal,starttime,endtime)
     errors=TypeError(terminal)
 
-    
+    print("*----------------------------*")
     print("Total time taken: ",time,"s")
     print("Average typing speed",speed)
     print("Total errors",errors)
