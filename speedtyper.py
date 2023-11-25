@@ -10,24 +10,27 @@ def typerror(terminal):
             if inputwords[i]==words[i]:    # first and last letter not matches mean it increase error count by 1
                 continue
             else:
-                errors=errors+1
+                errors +=1
         else:
             if inputwords[i]==words[i]:
                 if(inputwords[i+1]==words[i+1]&(inputwords[i-1]==words[i-1])):    #matching the adjacent elements after first or last element matching
                     continue
                 else:
-                    errors+=1
+                    errors +=1
             else:
-                errors+=1
+                errors +=1
         return errors
 
-def speed(inputterminal,startime,endtime):      #logic to calculate speed WPM
+def speed(inputterminal,starttime,endtime):    #logic to calculate speed WPM
     global time
     global inputwords
+    #global startime
+    
+    
     inputwords=inputterminal.split()
     twords=len(inputwords)
     speed=twords/time
-
+    
     return speed
 
 def timetaken(starttime,endtime):     #logic for calculating total time taken to write
@@ -35,7 +38,7 @@ def timetaken(starttime,endtime):     #logic for calculating total time taken to
     return time
 
 if __name__=='__main__':
-    
+    # enter the needed paragraph here
     terminal="This is a paragraph. You're reading a paragraph right now. This paragraph is three sentences long."
     print("Enter the paragraph below : ",terminal)
     print("*---------------------------*")
@@ -48,10 +51,9 @@ if __name__=='__main__':
     time=round(timetaken(starttime,endtime),2)            # return function values and time round off
     speed=speed(inputterminal,starttime,endtime)
     errors=typerror(terminal)
-
-print("*----------------------------*")
-print("Total time taken: ",time,"s")
-print("Average typing speed: ",speed)
-print("Total errors: ",errors)
+    print("*----------------------------*")
+    print("Total time taken: ",time,"s")
+    print("Average typing speed: ",speed)
+    print("Total errors: ",errors)
 
     
