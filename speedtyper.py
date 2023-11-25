@@ -1,8 +1,8 @@
 from time import time
 
-def typeerror(terminal):
+def typerror(terminal):
     global inputwords
-    words=terminal.split()  # words into list
+    words=terminal.split()                       #  split words into list
     errors=0
 
     for i in range(len(inputwords)):            #logic to calculate input accuracy
@@ -21,7 +21,7 @@ def typeerror(terminal):
                 errors+=1
         return errors
 
-def speed(inputterminal,starttime,endtime):      #logic to calculate speed WPM
+def speed(inputterminal,startime,endtime):      #logic to calculate speed WPM
     global time
     global inputwords
     inputwords=inputterminal.split()
@@ -47,11 +47,11 @@ if __name__=='__main__':
 
     time=round(timetaken(starttime,endtime),2)            # return function values and time round off
     speed=speed(inputterminal,starttime,endtime)
-    errors=TypeError(terminal)
+    errors=typerror(terminal)
 
-    print("*----------------------------*")
-    print("Total time taken: ",time,"s")
-    print("Average typing speed",speed)
-    print("Total errors",errors)
+print("*----------------------------*")
+print("Total time taken: ",time,"s")
+print("Average typing speed: ",speed)
+print("Total errors: ",errors)
 
     
