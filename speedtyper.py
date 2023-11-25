@@ -21,10 +21,10 @@ def typeerror(terminal):
                 errors+=1
         return errors
 
-def speed(interminal,starttime,endtime):      #logic to calculate speed WPM
+def speed(inputterminal,starttime,endtime):      #logic to calculate speed WPM
     global time
     global inputwords
-    inputwords=interminal.spilt()
+    inputwords=inputterminal.split()
     twords=len(inputwords)
     speed=twords/time
 
@@ -42,14 +42,16 @@ if __name__=='__main__':
     input()                               #press enter for speed check
     
     starttime=time()                            #logic to record input time
-    interminal=input()
+    inputterminal=input()
     endtime=time()
 
-    time=round(totaltime(starttime,endtime),2)            # return function values and time round off
-    speed=speed(interminal,starttime,endtime)
+    time=round(timetaken(starttime,endtime),2)            # return function values and time round off
+    speed=speed(inputterminal,starttime,endtime)
     errors=TypeError(terminal)
 
     
-
+    print("Total time taken: ",time,"s")
+    print("Average typing speed",speed)
+    print("Total errors",errors)
 
     
